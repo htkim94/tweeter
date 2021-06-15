@@ -11,6 +11,10 @@
   border-bottom: 3px solid #545149;
 }
 
+#tweet-text:focus {
+  outline: none;
+}
+
 .submitLine {
   display: flex;
   justify-content: space-between;
