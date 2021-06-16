@@ -2,7 +2,7 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-#tweet-text {
+#new-text {
   width: 100%;
   background-color: #f4f1ec;
   padding: 4px;
@@ -11,7 +11,7 @@
   border-bottom: 3px solid #545149;
 }
 
-#tweet-text:focus {
+#new-text:focus {
   outline: none;
 }
 

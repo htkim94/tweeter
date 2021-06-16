@@ -39,9 +39,9 @@ body {
 /* Tweets */
 .tweet {
   border: 3px solid #545149;
-  height: 8em;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -66,18 +66,18 @@ body {
 
 .tweetUser-name {
   margin-left: 0.5em;
+  font-weight: 300;
 }
 
 .tweetHandle {
   display: flex;
   align-items: center;
+  color: #b3b3cc
 }
 
 .tweetText {
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin: 0.8em 1em;
+  font-weight: 400;
 }
 
 .line {
@@ -90,19 +90,33 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  padding: 0px 25px 10px 25px;
+}
+
+.tweetTime {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.tweetIcons {
+  display: flex;
+  justify-content: space-between;
+  width: 50px;
+  margin-top: 10px;
 }
 
 .fa-flag {
   color: #4056A1;
-  font-size: 0.7em;
+  font-size: 0.5em;
 }
 
 .fa-retweet {
   color: #4056A1;
-  font-size: 0.7em;
+  font-size: 0.5em;
 }
 
 .fa-heart {
   color: #4056A1;
-  font-size: 0.7em;
+  font-size: 0.5em;
 }

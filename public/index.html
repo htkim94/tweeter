@@ -21,7 +21,7 @@
 
     <!-- Google Font CSS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -59,7 +59,7 @@
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets">
           <label for="tweet-text"><strong>What are you humming about?</strong></label>
-          <textarea name="text" id="tweet-text"></textarea>
+          <textarea name="text" id="new-text"></textarea>
           <div class="submitLine">
             <button type="submit">TWEET</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
@@ -83,7 +83,7 @@
         </main>
         <div class="line"></div>
         <footer>
-          <div class="tweetTime"></div>
+          <div class="tweetTime">10 days ago</div>
           <div class="tweetIcons">
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
