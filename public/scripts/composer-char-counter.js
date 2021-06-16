@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log('document is ready');
   $('#new-text').on('input', function() {
     const button = $('button');
     const textInput = $('#new-text').val();
