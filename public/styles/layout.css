@@ -46,6 +46,10 @@ body {
   justify-content: space-between;
 }
 
+.tweet:hover {
+  box-shadow: 4px 4px #aec2ea;
+}
+
 .tweet header {
   display: flex;
   justify-content: space-between;
@@ -71,7 +75,11 @@ body {
 .tweetHandle {
   display: flex;
   align-items: center;
-  color: #b3b3cc
+  color: #b3b3cc;
+}
+
+.tweet:hover .tweetHandle {
+  color: #aec2ea;
 }
 
 .tweetText {
@@ -110,12 +118,24 @@ body {
   font-size: 0.5em;
 }
 
+.fa-flag:hover {
+  color: #ffb84d;
+}
+
 .fa-retweet {
   color: #4056A1;
   font-size: 0.5em;
 }
 
+.fa-retweet:hover {
+  color: #ffb84d;
+}
+
 .fa-heart {
   color: #4056A1;
   font-size: 0.5em;
+}
+
+.fa-heart:hover {
+  color: #ffb84d;
 }
