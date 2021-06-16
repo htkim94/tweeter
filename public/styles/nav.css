@@ -32,12 +32,12 @@ nav {
   margin-bottom: 1em;
 }
 
-.fas {
+.fa-angle-double-down {
   color: red;
 }
 
 /* Header (profile img / name) */
-header {
+.profileHeader {
   height: 400px;
   width: auto;
   display: flex;

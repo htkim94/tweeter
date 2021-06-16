@@ -35,3 +35,74 @@ body {
   width: 90%;
   margin: auto;
 }
+
+/* Tweets */
+.tweet {
+  border: 3px solid #545149;
+  height: 8em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tweet header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.7em;
+}
+
+.tweetUser {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweetUser img {
+  width: 45px;
+  height: 45px;
+}
+
+.tweetUser-name {
+  margin-left: 0.5em;
+}
+
+.tweetHandle {
+  display: flex;
+  align-items: center;
+}
+
+.tweetText {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.line {
+  border-top: 3px solid #545149;
+  width: 98.5%;
+  margin: auto;
+}
+
+.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.fa-flag {
+  color: #4056A1;
+  font-size: 0.7em;
+}
+
+.fa-retweet {
+  color: #4056A1;
+  font-size: 0.7em;
+}
+
+.fa-heart {
+  color: #4056A1;
+  font-size: 0.7em;
+}
