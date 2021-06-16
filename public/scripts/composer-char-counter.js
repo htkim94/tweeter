@@ -13,5 +13,4 @@ $(document).ready(function() {
     }
     counter[0].innerHTML = result;
   })
-
 });
