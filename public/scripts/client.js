@@ -49,6 +49,7 @@ const createTweetElement = (tweet) => {
   return $tweetContainer.append(contentHtml);
 };
 
+// Function to render all of the tweet data
 const renderTweets = (tweets) => {
   const list = $('#tweetList');
   list.empty();
@@ -57,6 +58,7 @@ const renderTweets = (tweets) => {
   });
 }
 
+// AJAX get request to grab data and render tweets
 const loadTweets = () => {
   $.ajax('/tweets', { method: 'GET' })
   .then((tweets) => {
@@ -64,6 +66,7 @@ const loadTweets = () => {
   });
 }
 
+// AJAX post request and error handling
 const submitTweet = () => {
   $('form').submit(function (event) {
     event.preventDefault();
@@ -82,14 +85,23 @@ const submitTweet = () => {
       .then(() => {
         $('#new-text').val('');
         $('.counter').val(140);
+        $('.new-tweet').slideUp('slow');
         loadTweets();
       })
     }
   })
 }
 
+// Function to show Form when right top button clicked
+const newTweetClickHandler = () => {
+  $('.newTweet').on('click', () => {
+    $('.new-tweet').slideDown('slow');
+  });
+}
+
 $(document).ready(() => {
 
+  newTweetClickHandler();
   loadTweets();
   submitTweet();
 

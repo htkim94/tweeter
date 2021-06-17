@@ -1,5 +1,6 @@
 .new-tweet {
   font-family: 'Source Sans Pro', sans-serif;
+  display: none;
 }
 
 #new-text {
