@@ -70,9 +70,13 @@ const submitTweet = () => {
     const input = $(this).serialize();
     const [key, value] = input.split('=');
     if (!value) {
-      alert("You cannot post empty tweet!");
+      $('.error-long').slideUp('fast', () => {
+        $('.error-empty').slideDown('slow');
+      });
     } else if (value.length > 140) {
-      alert("Tweet length is over 140!");
+      $('.error-empty').slideUp('fast', () => {
+        $('.error-long').slideDown('slow');
+      });
     } else {
       $.ajax('/tweets', { method: 'POST', data: input })
       .then(() => {

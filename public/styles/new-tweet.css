@@ -28,8 +28,25 @@ button {
   border: 0px;
 }
 
-/* button:disabled {
-  background-color: #cccccc;
-  color: lightslategrey;
-} */
+.error {
+  height: 60px;
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 3px solid red;
+  color: red;
+}
+
+.error-empty {
+  display:none;
+}
+
+.error-long {
+  display:none;
+}
+
+.fa-exclamation-triangle {
+  color: red;
+}
 
