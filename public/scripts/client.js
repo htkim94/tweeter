@@ -44,7 +44,7 @@ const createTweetElement = (tweet) => {
 const renderTweets = (tweets) => {
   const list = $('#tweetList');
   list.empty();
-  tweets.forEach(tweet => {
+  tweets.reverse().forEach(tweet => {
     list.append(createTweetElement(tweet));
   });
 }
@@ -75,7 +75,5 @@ $(document).ready(() => {
         loadTweets();
       })
     }
-    
-    console.log(event);
   })
 });

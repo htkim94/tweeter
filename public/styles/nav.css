@@ -37,20 +37,3 @@ nav {
 .fa-angle-double-down {
   color: red;
 }
-
-/* Header (profile img / name) */
-.profileHeader {
-  margin-top: 120px;
-  height: 400px;
-  width: auto;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #ebca65;
-  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
-}
-
-.profileName h2 {
-  margin: 0px;
-}
