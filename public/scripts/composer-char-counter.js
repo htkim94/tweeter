@@ -6,10 +6,10 @@ $(document).ready(function() {
     const result = 140 - textInput.length;
     if (result < 0) {
       counter.css('color', 'red');
-      button.prop('disabled', true);
+      // button.prop('disabled', true);
     } else {
       counter.css('color', '');
-      button.prop('disabled', false);
+      // button.prop('disabled', false);
     }
     counter[0].innerHTML = result;
   })

@@ -42,15 +42,16 @@ const createTweetElement = (tweet) => {
 };
 
 const renderTweets = (tweets) => {
-  const mainContainer = $('.container');
+  const list = $('#tweetList');
+  list.empty();
   tweets.forEach(tweet => {
-    mainContainer.append(createTweetElement(tweet));
+    list.append(createTweetElement(tweet));
   });
 }
 
 $(document).ready(() => {
   const loadTweets = () => {
-    $.ajax('http://localhost:8080/tweets', { method: 'GET' })
+    $.ajax('/tweets', { method: 'GET' })
     .then((tweets) => {
       renderTweets(tweets);
     })
@@ -60,7 +61,21 @@ $(document).ready(() => {
 
   $('form').submit(function (event) {
     event.preventDefault();
+    const input = $(this).serialize();
+    const [key, value] = input.split('=');
+    if (!value) {
+      alert("You cannot post empty tweet!");
+    } else if (value.length > 140) {
+      alert("Tweet length is over 140!");
+    } else {
+      $.ajax('/tweets', { method: 'POST', data: input })
+      .then(() => {
+        $('#new-text').val('');
+        $('.counter').val(140);
+        loadTweets();
+      })
+    }
+    
     console.log(event);
-    console.log($(this).serialize());
   })
 });

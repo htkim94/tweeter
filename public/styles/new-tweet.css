@@ -28,8 +28,8 @@ button {
   border: 0px;
 }
 
-button:disabled {
+/* button:disabled {
   background-color: #cccccc;
   color: lightslategrey;
-}
+} */
 
