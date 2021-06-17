@@ -1,11 +1,9 @@
 /* Header (profile img / name) */
 .profileHeader {
-  margin-top: 120px;
   margin-bottom: 20px;
-  height: 400px;
-  width: auto;
   display: flex;
   flex-flow: column;
+  flex-grow: 1;
   justify-content: center;
   align-items: center;
   background-color: #ff9900;

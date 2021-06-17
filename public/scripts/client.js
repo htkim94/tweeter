@@ -85,6 +85,8 @@ const submitTweet = () => {
       .then(() => {
         $('#new-text').val('');
         $('.counter').val(140);
+        $('.error-long').slideUp('slow');
+        $('.error-empty').slideUp('slow');
         $('.new-tweet').slideUp('slow');
         loadTweets();
       })

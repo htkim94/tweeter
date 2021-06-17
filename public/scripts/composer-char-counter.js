@@ -1,6 +1,5 @@
 $(document).ready(function() {
   $('#new-text').on('input', function() {
-    const button = $('button');
     const textInput = $('#new-text').val();
     const counter = $('#new-text').parent().children('.submitLine').children('.counter');
     const result = 140 - textInput.length;

@@ -23,7 +23,7 @@
   font-size: 0.75em;
 }
 
-button {
+.submit {
   background-color: #4056A1;
   color: #FFFF;
   border: 0px;
@@ -31,7 +31,7 @@ button {
 
 .error {
   height: 60px;
-  margin: 20px 0px;
+  margin: 0px 0px 20px 0px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
