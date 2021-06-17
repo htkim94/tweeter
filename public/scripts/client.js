@@ -4,6 +4,14 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// Escape function for XSS prevention
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+// Function for creating a tweet
 const createTweetElement = (tweet) => {
   const { name, avatars, handle } = tweet.user;
   const { text } = tweet.content;
@@ -24,7 +32,7 @@ const createTweetElement = (tweet) => {
     </header>
     <main>
       <div class="tweetText">
-        ${text}
+        ${escape(text)}
       </div>
     </main>
     <div class="line"></div>
@@ -49,16 +57,14 @@ const renderTweets = (tweets) => {
   });
 }
 
-$(document).ready(() => {
-  const loadTweets = () => {
-    $.ajax('/tweets', { method: 'GET' })
-    .then((tweets) => {
-      renderTweets(tweets);
-    })
-  }
+const loadTweets = () => {
+  $.ajax('/tweets', { method: 'GET' })
+  .then((tweets) => {
+    renderTweets(tweets);
+  });
+}
 
-  loadTweets();
-
+const submitTweet = () => {
   $('form').submit(function (event) {
     event.preventDefault();
     const input = $(this).serialize();
@@ -76,4 +82,11 @@ $(document).ready(() => {
       })
     }
   })
+}
+
+$(document).ready(() => {
+
+  loadTweets();
+  submitTweet();
+
 });
