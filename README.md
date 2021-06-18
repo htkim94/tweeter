@@ -11,11 +11,16 @@ This project was built using:
 
 # Final Product
 
-!["Main page fullscreen screenshot"]()
-!["Main page button clicked screenshot"]()
-!["Main page empty tweet error screenshot"]()
-!["Main page long tweet error screenshot"]()
-!["Main page below desktop size screenshot"]()
+1: Main page in fullscreen size
+!["Main page fullscreen screenshot"](https://github.com/htkim94/tweeter/blob/master/docs/Tweet-Main-FullScreen.jpg)
+2: Main page when button (right-top-corner) is clicked
+!["Main page button clicked screenshot"](https://github.com/htkim94/tweeter/blob/master/docs/Tweet-Main-FullScreen-ButtonClicked.jpg)
+3: Main page with error message pop-up when empty tweet was submitted
+!["Main page empty tweet error screenshot"](https://github.com/htkim94/tweeter/blob/master/docs/Tweet-ErrorEmpty.jpg)
+4: Main page with error message pop-up when tweet length over 140 characters was submitted
+!["Main page long tweet error screenshot"](https://github.com/htkim94/tweeter/blob/master/docs/Tweet-ErrorLong.jpg)
+5: Main page is responsive to size of screen or browser
+!["Main page below desktop size screenshot"](https://github.com/htkim94/tweeter/blob/master/docs/Tweet-Responsive.jpg)
 
 
 ## Getting Started
