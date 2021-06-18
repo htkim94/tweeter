@@ -97,7 +97,12 @@ const submitTweet = () => {
 // Function to show Form when right top button clicked
 const newTweetClickHandler = () => {
   $('.newTweet').on('click', () => {
-    $('.new-tweet').slideDown('slow');
+    const target = $('.new-tweet');
+    if (target[0].style.display !== "block") {
+      $('.new-tweet').slideDown('slow');
+    } else {
+      $('.new-tweet').slideUp('slow');
+    }
   });
 }
 
