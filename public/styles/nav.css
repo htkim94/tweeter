@@ -7,8 +7,8 @@ nav {
 }
 
 .navbar {
-  font-family: 'Bungee', cursive;
-  color: #FFFF;
+  font-family: "Bungee", cursive;
+  color: #ffff;
   display: flex;
   height: 120px;
   justify-content: space-between;
@@ -24,7 +24,7 @@ nav {
 }
 
 .newTweet {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 22.5px;
   display: flex;
   flex-flow: column;

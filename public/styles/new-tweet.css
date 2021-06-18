@@ -1,5 +1,5 @@
 .new-tweet {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   display: none;
 }
 
@@ -19,13 +19,13 @@
 .submitLine {
   display: flex;
   justify-content: space-between;
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
   font-size: 0.75em;
 }
 
 .submit {
-  background-color: #4056A1;
-  color: #FFFF;
+  background-color: #4056a1;
+  color: #ffff;
   border: 0px;
 }
 
@@ -40,14 +40,13 @@
 }
 
 .error-empty {
-  display:none;
+  display: none;
 }
 
 .error-long {
-  display:none;
+  display: none;
 }
 
 .fa-exclamation-triangle {
   color: red;
 }
-

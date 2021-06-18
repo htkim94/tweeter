@@ -51,65 +51,66 @@ const createTweetElement = (tweet) => {
 
 // Function to render all of the tweet data
 const renderTweets = (tweets) => {
-  const list = $('#tweetList');
+  const list = $("#tweetList");
   list.empty();
-  tweets.reverse().forEach(tweet => {
+  tweets.reverse().forEach((tweet) => {
     list.append(createTweetElement(tweet));
   });
-}
+};
 
 // AJAX get request to grab data and render tweets
 const loadTweets = () => {
-  $.ajax('/tweets', { method: 'GET' })
-  .then((tweets) => {
+  $.ajax("/tweets", { method: "GET" }).then((tweets) => {
     renderTweets(tweets);
   });
-}
+};
 
 // AJAX post request and error handling
 const submitTweet = () => {
-  $('form').submit(function (event) {
+  $("form").submit(function (event) {
     event.preventDefault();
-    const input = $(this).serialize();
-    const [key, value] = input.split('=');
-    if (!value) {
-      $('.error-long').slideUp('fast', () => {
-        $('.error-empty').slideDown('slow');
-      });
-    } else if (value.length > 140) {
-      $('.error-empty').slideUp('fast', () => {
-        $('.error-long').slideDown('slow');
-      });
+    const input = $("#new-text").val();
+    const errorLong = $(".error-long");
+    const errorEmpty = $(".error-empty");
+    if (!input) {
+      if (errorLong[0].style.display === "block") errorLong.slideUp("fast");
+      errorEmpty.slideDown("slow");
+    } else if (input.length > 140) {
+      if (errorEmpty[0].style.display === "block") errorEmpty.slideUp("fast");
+      errorLong.slideDown("slow");
     } else {
-      $.ajax('/tweets', { method: 'POST', data: input })
+      if (errorLong[0].style.display === "block") errorLong.slideUp("fast");
+      if (errorEmpty[0].style.display === "block") errorEmpty.slideUp("fast");
+
+      $.ajax("/tweets", { method: "POST", data: $(this).serialize() })
       .then(() => {
-        $('#new-text').val('');
-        $('.counter').val(140);
-        $('.error-long').slideUp('slow');
-        $('.error-empty').slideUp('slow');
-        $('.new-tweet').slideUp('slow');
+        $("#new-text").val("");
+        $(".counter").val(140);
+        $(".new-tweet").slideUp("slow");
         loadTweets();
-      })
+      });
     }
-  })
-}
+  });
+};
 
 // Function to show Form when right top button clicked
 const newTweetClickHandler = () => {
-  $('.newTweet').on('click', () => {
-    const target = $('.new-tweet');
+  $(".newTweet").on("click", () => {
+    const target = $(".new-tweet");
+    const errorLong = $(".error-long");
+    const errorEmpty = $(".error-empty");
     if (target[0].style.display !== "block") {
-      $('.new-tweet').slideDown('slow');
+      $(".new-tweet").slideDown("slow");
     } else {
-      $('.new-tweet').slideUp('slow');
+      if (errorLong[0].style.display === "block") errorLong.slideUp("fast");
+      if (errorEmpty[0].style.display === "block") errorEmpty.slideUp("fast");
+      $(".new-tweet").slideUp("slow");
     }
   });
-}
+};
 
 $(document).ready(() => {
-
   newTweetClickHandler();
   loadTweets();
   submitTweet();
-
 });
